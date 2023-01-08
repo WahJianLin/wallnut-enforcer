@@ -12,7 +12,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "ts-node src/index.ts"
+    "start": "ts-node src/index.ts",
+    "format-all": "prettier --config .prettierrc '*.ts' --write"
   },
   "repository": {
     "type": "git",
