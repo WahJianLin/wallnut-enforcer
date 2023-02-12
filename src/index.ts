@@ -1,4 +1,4 @@
-import { Client } from "discord.js";
+import { Client, GatewayIntentBits } from "discord.js";
 import { token } from "./config.json";
 import interactionCreate from "./listeners/interactionCreate";
 import ready from "./listeners/ready";
@@ -6,7 +6,11 @@ import ready from "./listeners/ready";
 console.log("Bot is starting...");
 
 const client = new Client({
-  intents: [],
+  intents: [
+    GatewayIntentBits.Guilds,
+    GatewayIntentBits.MessageContent,
+    GatewayIntentBits.GuildMessages,
+  ],
 });
 
 ready(client);
